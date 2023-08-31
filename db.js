@@ -1,13 +1,21 @@
 const { MongoClient, ObjectId } = require('mongodb')
+require('dotenv').config()
+const db_username = process.env.DB_USERNAME 
+const db_password = process.env.DB_PASSWORD
+const host = process.env.DB_HOST
+const database = process.env.DB_NAME
+const port = process.env.DB_PORT
+//const connectionUrl = 'mongodb://'+username+':'+password+'@localhost:27017'
+const connectionUrl = `mongodb://${db_username}:${db_password}@${host}:${port}`
 
-const connectionUrl = 'mongodb://localhost:27017'
-const dbName = 'store'
+console.log(connectionUrl)
 
+// const dbName = 'store'
 let db
 
 const init = () =>
   MongoClient.connect(connectionUrl, { useNewUrlParser: true }).then((client) => {
-    db = client.db(dbName)
+    db = client.db(database)
   })
 
 const insertItem = (item) => {

@@ -1,0 +1,56 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "API testing",
+    "dateExported": "2023-08-31T11:15:38.987Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "bdbb8952-d896-45cc-86eb-2c9d597b67e1",
+            "colId": "06bae627-d2ab-4049-ad39-fc596a47bf4a",
+            "containerId": "",
+            "name": "Incremet/Decrement Quantity",
+            "url": "http://localhost:3000/item/64f063ff5aee0365f223dcbc/quantity/-2",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2023-08-31T11:15:03.806Z",
+            "modified": "2023-08-31T11:15:03.806Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f86ab8bc-901a-4982-acc2-2c5ee5320c95",
+            "colId": "06bae627-d2ab-4049-ad39-fc596a47bf4a",
+            "containerId": "",
+            "name": "List Products",
+            "url": "http://localhost:3000/items",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-08-31T11:15:16.496Z",
+            "modified": "2023-08-31T11:15:16.496Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4e079d91-4b11-4293-87e7-19c35173d197",
+            "colId": "06bae627-d2ab-4049-ad39-fc596a47bf4a",
+            "containerId": "",
+            "name": "Add product",
+            "url": "http://localhost:3000/item",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-08-31T11:15:30.480Z",
+            "modified": "2023-08-31T11:15:30.480Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n        \"name\": \"Salt\",\n        \"quantity\": 45\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
