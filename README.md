@@ -28,15 +28,39 @@ Before you begin, make sure you have the following installed:
     ```bash
     npm install
     ```
-3. Create a .env file in the project root directory to set environment variables:
-   MONGO_URI=mongodb://mongo:27017/your-database-name
+3. Create a `.env` file in the project root directory to set environment variables:
 
-   Replace your-database-name with the name of your MongoDB database.
+   ```plaintext
+   DB_USERNAME=your-db-username
+   DB_PASSWORD=your-db-password
+   DB_PORT=your-db-port
+   DB_NAME=your-db-name
+   DB_HOST=your-db-host
+   ```
+
+
+   Replace your-database-name with the name of your MongoDB database, your-db-username with your MongoDB username, your-db-password with your MongoDB password, if you've set credentials, your-db-port with your MongoDB port, and DB_HOST with your MongoDB host.
+
+   If you're using MongoDB credentials, you can set the connection URL in your Node.js application like this:
+
+   ```plaintext
+   const connectionUrl = `mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${host}:${port}`;
+   ```
+
+   if not:
+
+   ```plaintext
+   const connectionUrl = `mongodb:27017//your-database-name`;
+   ```
+
+   Make sure to replace host and port with the appropriate values.
+
+   By using environment variables, you can securely store your database credentials without exposing them directly in your codebase.
 
 4. Build and run the Docker containers using Docker Compose:
 
     ```bash 
-    docker-compose up -d
+    docker compose up -d
     ```
 
 5. Access the Node.js app at: http://localhost:3000
