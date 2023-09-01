@@ -8,12 +8,11 @@ const port = process.env.DB_PORT
 //const connectionUrl = 'mongodb://'+username+':'+password+'@localhost:27017'
 const connectionUrl = `mongodb://${db_username}:${db_password}@${host}:${port}`
 
-console.log(connectionUrl)
 
 // const dbName = 'store'
 let db
 
-const init = () =>
+const init = () => 
   MongoClient.connect(connectionUrl, { useNewUrlParser: true }).then((client) => {
     db = client.db(database)
   })
