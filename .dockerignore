@@ -1,0 +1,10 @@
+#As best prectices: In this file, we can specify
+# the things that we should ignore in our process (like copying files ... ).
+# So these folders/files won't be copied 
+
+./node_modules
+Dockerfile
+docker-compose.yml
+.dockerignore
+test.http
+thunder-collection_API testing.json

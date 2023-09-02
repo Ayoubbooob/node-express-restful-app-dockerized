@@ -5,11 +5,9 @@ const db_password = process.env.DB_PASSWORD
 const host = process.env.DB_HOST
 const database = process.env.DB_NAME
 const port = process.env.DB_PORT
-//const connectionUrl = 'mongodb://'+username+':'+password+'@localhost:27017'
 const connectionUrl = `mongodb://${db_username}:${db_password}@${host}:${port}`
 
 
-// const dbName = 'store'
 let db
 
 const init = () => 
