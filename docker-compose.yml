@@ -10,7 +10,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=admin
     volumes:
-      - db:/data/db  
+      - mongo-data:/data/db  
   mongo-express:
     container_name: mongoexpc
     image: mongo-express
@@ -34,7 +34,8 @@ services:
     tty: true
 
 volumes:
-  db:
+  mongo-data:
+    driver: local
 
 
 
